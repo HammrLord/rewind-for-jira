@@ -3,41 +3,41 @@
 Every change. Every comment. Exportable, and explainable. This is Rewind for Jira.
 
 2
-00:00:08,786 --> 00:00:21,773
+00:00:08,754 --> 00:00:21,743
 Over a thousand teams voted for single project export, open since 2013. Two hundred and twenty nine want to export issue history to Excel. And Jira's CSV export stops at ten thousand items.
 
 3
-00:00:22,351 --> 00:00:31,353
+00:00:22,395 --> 00:00:31,397
 The activity tab is a scroll you can't filter, measure, or export. Rewind turns it into something you can actually use.
 
 4
-00:00:32,150 --> 00:00:43,367
+00:00:32,237 --> 00:00:43,457
 Here's a real-world style issue: checkout failing on Android 14. Rewind's issue panel shows every change and comment. Filter to just status changes, or search the whole history.
 
 5
-00:00:43,367 --> 00:00:54,318
+00:00:43,457 --> 00:00:54,406
 The metrics tab. Lead time to the final done, not the premature first close. Time in each status. One reopen, three hand-offs, and the estimate grew from three to eight.
 
 6
-00:00:54,318 --> 00:01:03,610
+00:00:54,406 --> 00:01:03,693
 And the request Atlassian marked not being considered: export the full history to Excel, as a JSON archive, or as a summary ready for Confluence.
 
 7
-00:01:03,610 --> 00:01:13,566
+00:01:03,693 --> 00:01:13,651
 On the project page, one click exports every issue with its full history, paging past the ten thousand item cap, and ranks churn hotspots across the project.
 
 8
-00:01:13,566 --> 00:01:24,645
+00:01:13,651 --> 00:01:24,727
 Finally, the Rewind Rovo agent. Ask what happened and why it took so long. It calls the history action and answers with exact dates, people and values, never invented ones.
 
 9
-00:01:25,510 --> 00:01:40,047
+00:01:25,507 --> 00:01:40,045
 Twelve features, one history engine. Filters, search, lead time, time in status, reopens, hand-offs, scope changes, Excel and JSON export, project backup, hotspots, and a Rovo agent.
 
 10
-00:01:40,704 --> 00:01:54,480
+00:01:40,630 --> 00:01:54,408
 Under the hood: Forge resolvers call Jira's REST API as the user, a pure, unit tested engine computes everything, and the same engine powers the panel, the project page, and the Rovo agent. No data leaves Atlassian.
 
 11
-00:01:55,068 --> 00:02:03,069
+00:01:54,998 --> 00:02:03,000
 Rewind for Jira. Your team already wrote the history. Rewind lets you read it.
