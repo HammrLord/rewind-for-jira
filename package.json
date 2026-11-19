@@ -1,0 +1,13 @@
+{
+  "name": "rewind-for-jira",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:ui": "esbuild static/rewind/src/main.js --bundle --format=esm --outfile=static/rewind/build/main.js && cp static/rewind/src/index.html static/rewind/src/ui.css static/rewind/build/",
+    "build:demo": "esbuild demo/demo.js --bundle --format=esm --outfile=demo/build/demo.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": { "@forge/api": "^5.0.0", "@forge/resolver": "^1.6.0", "@forge/bridge": "^4.0.0" },
+  "devDependencies": { "esbuild": "^0.24.0" }
+}

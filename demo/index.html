@@ -1,0 +1,24 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rewind for Jira</title><link rel="stylesheet" href="../static/rewind/src/ui.css"><link rel="stylesheet" href="demo.css"></head>
+<body>
+<header class="jtop"><div class="jlogo">⟲</div><b>Rewind sandbox</b><span class="jsearch">Simulated Jira Cloud issue view</span><span class="jbadge">Demo · simulated data</span><a href="../deck.html" class="jlink">Pitch deck</a></header>
+<div class="jwrap">
+  <aside class="jside"><div class="proj"><span class="pi">A</span><div><b>ACME Mobile</b><small>Software project</small></div></div>
+    <a data-view="issue" class="on">Issue view</a><a data-view="project">Apps · Rewind export</a><a data-view="rovo">Rovo · Ask Rewind</a></aside>
+  <main class="jmain">
+    <section id="v-issue" class="view">
+      <div class="crumb">Projects / ACME Mobile / <b>ACME-142</b></div>
+      <div class="issue"><div class="ileft"><h1>Checkout fails on UPI intent for Android 14</h1>
+        <div class="desc"><b>Description</b><p>Android 14 users see the payment sheet close immediately when choosing a UPI app. Affects PhonePe and Paytm; GPay works. ~4% checkout drop.</p></div>
+        <div class="desc"><b>Activity</b><p class="muted">Jira's native activity can't be exported, filtered by field, or measured. Rewind (right) can.</p></div></div>
+        <div class="iright"><div class="fields"><div><span>Status</span><b class="pill done">DONE</b></div><div><span>Assignee</span><b>Priya Nair</b></div><div><span>Priority</span><b>Highest</b></div><div><span>Fix version</span><b>4.12.0</b></div></div>
+        <div class="panel"><div class="ptitle">Rewind · Issue history</div><div id="issueRoot"></div></div></div></div>
+    </section>
+    <section id="v-project" class="view" hidden><div class="crumb">Projects / ACME Mobile / <b>Apps / Rewind</b></div><div class="panel wide"><div id="projectRoot"></div></div></section>
+    <section id="v-rovo" class="view" hidden><div class="crumb">Rovo chat · <b>Rewind agent</b></div>
+      <div class="rovo"><div id="chat"></div><div class="starters" id="starters"></div><form id="ask"><input id="q" placeholder="Ask Rewind about any work item…" value="What happened on ACME-142, and why did it take so long?"><button>Send</button></form>
+      <p class="muted small">Demo: the agent's answer is composed from the same <code>get-issue-history</code> action output the Forge Rovo agent receives.</p></div></section>
+  </main>
+</div>
+<script type="module" src="demo.js"></script>
+</body></html>

@@ -1,0 +1,57 @@
+modules:
+  jira:issuePanel:
+    - key: rewind-issue-panel
+      resource: rewind-ui
+      resolver:
+        function: resolver
+      title: Rewind · Issue history
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+  jira:projectPage:
+    - key: rewind-project-page
+      resource: rewind-ui
+      resolver:
+        function: resolver
+      title: Rewind · Project export
+  rovo:agent:
+    - key: rewind-agent
+      name: Rewind
+      description: Answers "what changed, when, and who did it" for any Jira work item, using its full changelog and comments.
+      prompt: >
+        You are Rewind, a Jira history analyst. When asked about a work item, call the get-issue-history
+        action with its key. Answer with a short timeline (date, actor, field, from -> to), then key metrics:
+        time in each status, number of reopens, assignee hand-offs. Quote exact values from the history.
+        Never invent events that are not in the returned data.
+      conversationStarters:
+        - What changed on this issue last week?
+        - How long did this issue spend in each status?
+        - Who changed the priority and when?
+      actions:
+        - get-issue-history
+  action:
+    - key: get-issue-history
+      name: Get issue history
+      function: historyAction
+      actionVerb: GET
+      description: Returns the full changelog, comments and computed metrics for a Jira work item.
+      inputs:
+        issueKey:
+          title: Issue key
+          type: string
+          required: true
+          description: The Jira issue key, for example ENG-42
+  function:
+    - key: resolver
+      handler: index.handler
+    - key: historyAction
+      handler: index.historyAction
+resources:
+  - key: rewind-ui
+    path: static/rewind/build
+app:
+  runtime:
+    name: nodejs22.x
+  id: ari:cloud:ecosystem::app/REPLACE-WITH-forge-register
+permissions:
+  scopes:
+    - read:jira-work
+    - read:jira-user
